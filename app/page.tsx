@@ -1,103 +1,168 @@
+import Features from "@/components/features-1";
+import FooterSection from "@/components/footer";
+import { HeroHeader } from "@/components/hero8-header";
+import Pricing from "@/components/pricing";
+import StatsSection from "@/components/stats-3";
+import WallOfLoveSection from "@/components/testimonials";
+import { Button } from "@/components/ui/button";
+import { InfiniteSlider } from "@/components/ui/infinite-slider";
+import { ProgressiveBlur } from "@/components/ui/progressive-blur";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div >
+      <HeroHeader />
+      <main className="overflow-x-hidden">
+        <section>
+          <div className="pb-24 pt-12 md:pb-32 lg:pb-56 lg:pt-44">
+            <div className="relative mx-auto flex max-w-6xl flex-col px-6 lg:block">
+              <div className="mx-auto max-w-lg text-center lg:ml-0 lg:w-1/2 lg:text-left">
+                <h1 className="mt-8 max-w-2xl text-balance text-5xl font-medium md:text-6xl lg:mt-16 xl:text-7xl">Ship 10x Faster with NS</h1>
+                <p className="mt-8 max-w-2xl text-pretty text-lg">Highly customizable components for building modern websites and applications that look and feel the way you mean it.</p>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+                <div className="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row lg:justify-start">
+                  <Button
+                    asChild
+                    size="lg"
+                    className="px-5 text-base">
+                    <Link href="#link">
+                      <span className="text-nowrap">Start Building</span>
+                    </Link>
+                  </Button>
+                  <Button
+                    key={2}
+                    asChild
+                    size="lg"
+                    variant="ghost"
+                    className="px-5 text-base">
+                    <Link href="#link">
+                      <span className="text-nowrap">Request a demo</span>
+                    </Link>
+                  </Button>
+                </div>
+              </div>
+              <Image
+                className="-z-10 order-first ml-auto h-56 w-full object-cover invert sm:h-96 lg:absolute lg:inset-0 lg:-right-20 lg:-top-96 lg:order-last lg:h-max lg:w-2/3 lg:object-contain dark:mix-blend-lighten dark:invert-0"
+                src="https://res.cloudinary.com/dg4jhba5c/image/upload/v1741605150/abstract-bg_wq4f8w.jpg"
+                alt="Abstract Object"
+                height="4000"
+                width="3000"
+              />
+            </div>
+          </div>
+        </section>
+        <section className="bg-background pb-16 md:pb-32">
+          <div className="group relative m-auto max-w-6xl px-6">
+            <div className="flex flex-col items-center md:flex-row">
+              <div className="md:max-w-44 md:border-r md:pr-6">
+                <p className="text-end text-sm">Powering the best teams</p>
+              </div>
+              <div className="relative py-6 md:w-[calc(100%-11rem)]">
+                <InfiniteSlider
+                  speedOnHover={20}
+                  speed={40}
+                  gap={112}>
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-5 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/nvidia.svg"
+                      alt="Nvidia Logo"
+                      height="20"
+                      width="auto"
+                    />
+                  </div>
+
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-4 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/column.svg"
+                      alt="Column Logo"
+                      height="16"
+                      width="auto"
+                    />
+                  </div>
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-4 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/github.svg"
+                      alt="GitHub Logo"
+                      height="16"
+                      width="auto"
+                    />
+                  </div>
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-5 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/nike.svg"
+                      alt="Nike Logo"
+                      height="20"
+                      width="auto"
+                    />
+                  </div>
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-5 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/lemonsqueezy.svg"
+                      alt="Lemon Squeezy Logo"
+                      height="20"
+                      width="auto"
+                    />
+                  </div>
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-4 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/laravel.svg"
+                      alt="Laravel Logo"
+                      height="16"
+                      width="auto"
+                    />
+                  </div>
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-7 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/lilly.svg"
+                      alt="Lilly Logo"
+                      height="28"
+                      width="auto"
+                    />
+                  </div>
+
+                  <div className="flex">
+                    <img
+                      className="mx-auto h-6 w-fit dark:invert"
+                      src="https://html.tailus.io/blocks/customers/openai.svg"
+                      alt="OpenAI Logo"
+                      height="24"
+                      width="auto"
+                    />
+                  </div>
+                </InfiniteSlider>
+
+                <div className="bg-linear-to-r from-background absolute inset-y-0 left-0 w-20"></div>
+                <div className="bg-linear-to-l from-background absolute inset-y-0 right-0 w-20"></div>
+                <ProgressiveBlur
+                  className="pointer-events-none absolute left-0 top-0 h-full w-20"
+                  direction="left"
+                  blurIntensity={1}
+                />
+                <ProgressiveBlur
+                  className="pointer-events-none absolute right-0 top-0 h-full w-20"
+                  direction="right"
+                  blurIntensity={1}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+        <StatsSection/>
+        <WallOfLoveSection/>
+        <Features/>
+        <Pricing/>
+
+        <FooterSection/>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
     </div>
   );
 }
